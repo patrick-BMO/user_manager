@@ -1,15 +1,13 @@
 from pydantic import BaseModel, Field
+from datetime import date
+
 
 class User(BaseModel):
     name: str = Field(max_length=50)
     last_name: str = Field(max_length=50)
-    birth: str
+    birth: date
 
     cpf: str = Field(max_length=11)
     number: str
     adress: str
     email: str
-
-
-with open('db.json', 'r') as db:
-    data = db.read()
