@@ -31,20 +31,20 @@ def cpfValidation(cpf):
     cpf_size = 11
 
     if len(numbers) + len(digits) != cpf_size:
-        raise cpfSizeError()
+        return cpfSizeError()
 
     weight = list(range(10, 1, -1))
 
     if not firstDigitValidation(digits=digits, numbers=numbers, numbers_size=9, weight=weight):
-        raise invalidCpfError('1° digito não confere')
+        return invalidCpfError('1° digito não confere')
     
     numbers.append(digits[0])
     weight.insert(0, 11)
 
     if not secondDigitValidation(digits=digits, numbers=numbers, numbers_size=10, weight=weight):
-        raise invalidCpfError('2° digito não confere')
+        return invalidCpfError('2° digito não confere')
 
-    return True
+    return cpf
 
 
 
