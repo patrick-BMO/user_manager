@@ -1,13 +1,27 @@
-from pydantic import BaseModel, Field, field_validator, EmailStr
-from datetime import date
-from cpf import cpfValidation
+from fastapi import FastAPI
+from fastapi.responses import JSONResponse
+from pydantic import EmailStr
+from db import Start, Save, genUUID
+from models import User
 
-class Adress(BaseModel):
-    Estado: str = Field(max_length=20)
-    Cidade: str = Field(max_length=50)
-    Bairro: str = Field(max_length=100)
-    Rua: str = Field(max_length=50)
-    numero: int
+app = FastAPI()
+data = Start()
+
+@app.post('/post_user/')
+async def Create(user: User):
+    Save(user, data)
+
+    return JSONResponse(content=User.model_dump(), status_code=201)
+
+
+@app.get('/get_user/')
+async def Get(email: EmailStr | None = None):
+    if email == None:
+        return JSONResponse(content=data, status_code=200)
+    
+    else:
+        return JSONResponse(content=data[genUUID(email)], status_code=200)
+
 
 
 class Cpf(BaseModel):
