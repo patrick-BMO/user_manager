@@ -56,17 +56,6 @@ def secondDigitValidation(digits: list[int], numbers: list[int], numbers_size: i
     second_digit = 11 - sum([numbers[i]*weight[i] for i in range(numbers_size)])%11
     return digits[1] == second_digit or digits[1] == 0 and second_digit > 9
     
-if __name__ == '__main__':
-    cpf = '023.482.392-55'
-
-    
-    try:
-        if cpfValidation(cpf):
-            print('cpf valido')
-    
-    except Exception as e:
-        print(e)
-    
     
 
     

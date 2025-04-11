@@ -36,9 +36,6 @@ async def Update(email: EmailStr, atrib: str, newvalue):
 
     return JSONResponse(content={'old': user, 'new': newuser}, status_code=200) 
 
-    cpf: Cpf
-    number: str = Field(pattern=r'^[0-9]{2}[9][0-9]{8}$')
-    email: EmailStr
 
 @app.delete('/Delete/{email}')
 async def Delete(email):
