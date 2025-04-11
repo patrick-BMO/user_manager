@@ -1,0 +1,77 @@
+{
+    "96c38914-bb9b-5752-a5af-3cf5502486b3": {
+        "first_name": "Maria",
+        "last_name": "Silva",
+        "birth": "17/11/2005",
+        "cpf": "053.942.470-64",
+        "number": "90998425577",
+        "email": "mariasilva@email.com",
+        "adress": {
+            "Estado": "par\u00e1",
+            "Cidade": "Altamira",
+            "Bairro": "Centro",
+            "Rua": "Rua dos crisantemos",
+            "numero": "007"
+        }
+    },
+    "051ad934-73d0-5e97-85b8-ccafbb171179": {
+        "first_name": "Joao",
+        "last_name": "Silva",
+        "birth": "17/11/2005",
+        "cpf": "053.942.470-64",
+        "number": "90998425577",
+        "email": "joaosilvaa@email.com",
+        "adress": {
+            "Estado": "par\u00e1",
+            "Cidade": "Altamira",
+            "Bairro": "Centro",
+            "Rua": "Rua dos crisantemos",
+            "numero": "007"
+        }
+    },
+    "bd85f94c-e5e4-5966-82a8-493bce74da97": {
+        "first_name": "banana",
+        "last_name": "Silva",
+        "birth": "17/11/2005",
+        "cpf": "053.942.470-64",
+        "number": "90998425577",
+        "email": "bananasilvaa@email.com",
+        "adress": {
+            "Estado": "par\u00e1",
+            "Cidade": "Altamira",
+            "Bairro": "Centro",
+            "Rua": "Rua dos crisantemos",
+            "numero": "007"
+        }
+    },
+    "b4b0610c-1015-5d4f-aece-5a7476684995": {
+        "first_name": "Beatriz",
+        "last_name": "Oliveira",
+        "birth": "12/05/1988",
+        "cpf": "641.942.140-30",
+        "number": "11987654321",
+        "email": "beatriz.o@terra.com.br",
+        "adress": {
+            "Estado": "S\u00e3o Paulo",
+            "Cidade": "Campinas",
+            "Bairro": "Cambu\u00ed",
+            "Rua": "Avenida Jos\u00e9 de Souza Campos",
+            "numero": "789"
+        }
+    },
+    "63145c1f-caf1-562c-b475-3908ca05dac6": {
+        "first_name": "Carlos",
+        "last_name": "Pereira",
+        "birth": "23/11/1995",
+        "cpf": "315.280.330-35",
+        "number": "21991234567",
+        "email": "carlos.p@gmail.com",
+        "adress": {
+            "Estado": "Rio de Janeiro",
+            "Cidade": "Niter\u00f3i",
+            "Bairro": "Icara\u00ed",
+            "Rua": "Rua Moreira C\u00e9sar",
+            "numero": "543"
+        }
+    }
+}

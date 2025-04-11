@@ -39,7 +39,7 @@ def cpfValidation(cpf):
         return invalidCpfError('1° digito não confere')
     
     numbers.append(digits[0])
-    weight.insert(0, 11)
+    weight.insert(0, cpf_size)
 
     if not secondDigitValidation(digits=digits, numbers=numbers, numbers_size=10, weight=weight):
         return invalidCpfError('2° digito não confere')
