@@ -23,24 +23,23 @@ async def Get(email: EmailStr | None = None):
         return JSONResponse(content=data[genUUID(email)], status_code=200)
 
 
+@app.put('/update_user/{email}/{atrib}/{newvalue}')
+async def Update(email: EmailStr, atrib: str, newvalue):
+    key = genUUID(email)
 
-class Cpf(BaseModel):
-    cpf: str
+    user = data[key]
 
-    @field_validator('cpf')
-    def validar_cpf(cls, value):
-        result  = cpfValidation(value)
-        if result != value:
-            raise result
+    newuser = {key: (value if key != atrib else newvalue) for key, value in user.items()}
 
+    data[key] = newuser
+    Save(data)
 
-class User(BaseModel):
-    first_name: str = Field(max_length=50)
-    last_name: str = Field(max_length=50)
-    birth: date
+    return JSONResponse(content={'old': user, 'new': newuser}, status_code=200) 
 
     cpf: Cpf
     number: str = Field(pattern=r'^[0-9]{2}[9][0-9]{8}$')
     email: EmailStr
 
-    adress: Adress
+@app.delete('/Delete/{email}')
+async def Delete(email):
+    return JSONResponse(content={'Deleted': data.pop[genUUID(email)]}, status_code=200)
